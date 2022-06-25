@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.CheckFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/purple_500"
+        android:id="@+id/toolbar">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/myToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="See Connections"
+            app:titleTextColor="@color/white">
+            <ImageButton
+                android:id="@+id/addNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_vec"
+                android:layout_gravity="right"
+                android:backgroundTint="#00ffffff"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/firstNode1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First node"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/white"
+            app:helperText="Type a number, from 0 to 20"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="2"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/secondNode2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Second node"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/white"
+            app:helperText="Type a number, from 0 to 20"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="2"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/confirmText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/subText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap on input text fields to reset and enter another pair of nodes"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/checkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/eye_vec"
+            android:text="CHECK CONNECTION"/>
+    </LinearLayout>
+
+</RelativeLayout>
